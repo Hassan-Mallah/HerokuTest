@@ -2,6 +2,11 @@
 {% load static %}
 
 {% block content %}
-<br>
-<center><p>Welcome to Hassan :)</p></center>
+<div class="container p-3 mb-2 bg-info text-white">
+    <p>Welcome to Hassan :)</p>
+    {% for i in greetings %}
+    <p>{{ i.pk }} - {{ i.name }}</p>
+
+    {% endfor %}
+</div>
 {% endblock %}
